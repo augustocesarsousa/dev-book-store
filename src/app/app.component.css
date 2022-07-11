@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+  color: unset;
+}
+
+#root{
+  margin-bottom: 80px;
+  --black: #000;
+  --gray-100: #3E444F;
+  --gray-50: #B4B8C5;
+  --gray-10: #E9EBF8;
+  --white: #FFF;
+}
