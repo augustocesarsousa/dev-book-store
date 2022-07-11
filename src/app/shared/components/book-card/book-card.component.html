@@ -1,0 +1,6 @@
+<div id="card-book-container">
+  <img [src]="book.imageUrl" alt="" id="card-book-img" />
+  <h3 id="card-book-name">{{ book.name }}</h3>
+  <p id="card-book-author">{{ book.author }}</p>
+  <p id="card-book-price">{{ book.price | currency: "BRL" }}</p>
+</div>

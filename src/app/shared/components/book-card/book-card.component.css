@@ -1,0 +1,28 @@
+#card-book-container{
+  padding: 5px;
+  width: 150px;
+  border: 1px solid var(--gray-10);
+  margin-bottom: 10px;
+}
+
+#card-book-img{
+  width: 140px;
+}
+
+#card-book-name{
+  font-size: 1em;
+  color: var(--gray-100);
+}
+
+#card-book-author{
+  font-size: .8em;
+  color: var(--orange-100);
+  margin: 0;
+}
+
+#card-book-price{
+  font-size: 1.5em;
+  font-weight: 500;
+  color: var(--blue-75);
+  margin: 0;
+}
