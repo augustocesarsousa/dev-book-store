@@ -1,0 +1,44 @@
+#home-container{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+#sidebar-content{
+  position: fixed;
+  left: 0px;
+  width: 280px;
+  height: 100%;
+  padding: 30px;
+  background-color: var(--gray-100);
+  color: var(--gray-10);
+}
+
+#find-by-price-content{
+  margin-bottom: 30px;
+}
+
+#btn-sidebar-content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 15px;
+  width: 60px;
+  height: 50px;
+  background-color: var(--gray-100);
+  border-radius: 30px;
+  position: absolute;
+  right: -35px;
+  top: calc(50% - 40px);
+  font-size: 1.3em;
+}
+
+#btn-sidebar{
+  display: none;
+}
+
+#book-list-content{
+  padding: 10px;
+  width: 100%;
+}
