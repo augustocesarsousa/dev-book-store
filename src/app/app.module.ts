@@ -9,11 +9,12 @@ import { AppComponent } from './app.component';
 import { BookCardComponent } from './shared/components/book-card/book-card.component';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { FilterByPriceComponent } from './core/components/filter-by-price/filter-by-price.component';
+import { FilterByCategoryComponent } from './core/components/filter-by-category/filter-by-category.component';
 
 registerLocaleData(localePt);
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, BookCardComponent, FilterByPriceComponent],
+  declarations: [AppComponent, HeaderComponent, BookCardComponent, FilterByPriceComponent, FilterByCategoryComponent],
   imports: [BrowserModule, AppRoutingModule, FontAwesomeModule],
   providers: [
     {
