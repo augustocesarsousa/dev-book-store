@@ -86,6 +86,7 @@
     display: flex;
     justify-content: space-between;
     padding: 15px 30px;
+    height: 65px;
   }
 
   #dbs-header-logo-container,

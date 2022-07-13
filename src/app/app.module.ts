@@ -11,12 +11,13 @@ import { HeaderComponent } from './shared/components/header/header.component';
 import { FilterByPriceComponent } from './core/components/filter-by-price/filter-by-price.component';
 import { FilterByCategoryComponent } from './core/components/filter-by-category/filter-by-category.component';
 import { HomeComponent } from './pages/home/home.component';
+import { FormsModule } from '@angular/forms';
 
 registerLocaleData(localePt);
 
 @NgModule({
   declarations: [AppComponent, HeaderComponent, BookCardComponent, FilterByPriceComponent, FilterByCategoryComponent, HomeComponent],
-  imports: [BrowserModule, AppRoutingModule, FontAwesomeModule],
+  imports: [BrowserModule, AppRoutingModule, FontAwesomeModule, FormsModule],
   providers: [
     {
       provide: LOCALE_ID,

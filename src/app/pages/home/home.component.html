@@ -1,40 +1,49 @@
-<div id="home-container">
-  <section id="sidebar-content">
-    <div id="find-by-price-content">
-      <app-filter-by-price></app-filter-by-price>
-    </div>
-    <div id="find-by-category-content">
-      <app-filter-by-category></app-filter-by-category>
-    </div>
-    <span id="btn-sidebar-content">
-      <input type="checkbox" name="btn-sidebar" id="btn-sidebar" />
-      <label for="btn-sidebar"><fa-icon [icon]="faArrowRight"></fa-icon></label>
-    </span>
-  </section>
-  <section id="book-list-content" class="row">
-    <div class="col-6 col-sm-4 col-md-3">
-      <app-book-card></app-book-card>
-    </div>
-    <div class="col-6 col-sm-4 col-md-3">
-      <app-book-card></app-book-card>
-    </div>
-    <div class="col-6 col-sm-4 col-md-3">
-      <app-book-card></app-book-card>
-    </div>
-    <div class="col-6 col-sm-4 col-md-3">
-      <app-book-card></app-book-card>
-    </div>
-    <div class="col-6 col-sm-4 col-md-3">
-      <app-book-card></app-book-card>
-    </div>
-    <div class="col-6 col-sm-4 col-md-3">
-      <app-book-card></app-book-card>
-    </div>
-    <div class="col-6 col-sm-4 col-md-3">
-      <app-book-card></app-book-card>
-    </div>
-    <div class="col-6 col-sm-4 col-md-3">
-      <app-book-card></app-book-card>
-    </div>
-  </section>
-</div>
+<section id="home-container">
+  <div id="home-content">
+    <section id="sidebar-content" [ngStyle]="{'left':isChecked?'0':'-280px'}">
+      <div id="find-by-category-content">
+        <app-filter-by-category></app-filter-by-category>
+      </div>
+      <div id="find-by-price-content">
+        <app-filter-by-price></app-filter-by-price>
+      </div>
+      <span id="btn-sidebar-content">
+        <input type="checkbox" name="chk-sidebar" id="chk-sidebar" (change)="checkValue($event)"/>
+        <label for="chk-sidebar" *ngIf="!isChecked else arrowLeftTemplate">
+          <fa-icon [icon]="arrowRight"></fa-icon>
+        </label>
+      </span>
+      <ng-template #arrowLeftTemplate>
+        <label for="chk-sidebar">
+          <fa-icon [icon]="arrowLeft"></fa-icon>
+        </label>
+      </ng-template>
+    </section>
+    <section id="book-list-content" class="row">
+      <div class="col-6 col-sm-4 col-md-3 book-card-content">
+        <app-book-card></app-book-card>
+      </div>
+      <div class="col-6 col-sm-4 col-md-3 book-card-content">
+        <app-book-card></app-book-card>
+      </div>
+      <div class="col-6 col-sm-4 col-md-3 book-card-content">
+        <app-book-card></app-book-card>
+      </div>
+      <div class="col-6 col-sm-4 col-md-3 book-card-content">
+        <app-book-card></app-book-card>
+      </div>
+      <div class="col-6 col-sm-4 col-md-3 book-card-content">
+        <app-book-card></app-book-card>
+      </div>
+      <div class="col-6 col-sm-4 col-md-3 book-card-content">
+        <app-book-card></app-book-card>
+      </div>
+      <div class="col-6 col-sm-4 col-md-3 book-card-content">
+        <app-book-card></app-book-card>
+      </div>
+      <div class="col-6 col-sm-4 col-md-3 book-card-content">
+        <app-book-card></app-book-card>
+      </div>
+    </section>
+  </div>
+</section>

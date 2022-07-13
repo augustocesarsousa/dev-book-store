@@ -1,21 +1,25 @@
 #home-container{
-  position: relative;
   display: flex;
   justify-content: center;
-  width: 100%;
+}
+
+#home-content{
+  position: relative;
+  max-width: 1200px;
 }
 
 #sidebar-content{
-  position: fixed;
-  left: 0px;
+  position: absolute;
+  left: -280px;
   width: 280px;
   height: 100%;
   padding: 30px;
   background-color: var(--gray-100);
   color: var(--gray-10);
+  transition: all .5s ease;
 }
 
-#find-by-price-content{
+#find-by-category-content{
   margin-bottom: 30px;
 }
 
@@ -30,15 +34,41 @@
   border-radius: 30px;
   position: absolute;
   right: -35px;
-  top: calc(50% - 40px);
+  top: 40px;
   font-size: 1.3em;
 }
 
-#btn-sidebar{
+#chk-sidebar{
   display: none;
 }
 
 #book-list-content{
   padding: 10px;
-  width: 100%;
 }
+
+.book-card-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+@media(min-width: 992px){
+
+  #sidebar-content{
+    width: 240px;
+    left: 0;
+    background-color: var(--white);
+    color: var(--gray-100);
+    border-right: 1px solid var(--gray-50);
+  }
+
+  #btn-sidebar-content{
+    display: none;
+  }
+
+  #book-list-content{
+    margin-left: 240px;
+  }
+}
+
