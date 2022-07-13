@@ -12,11 +12,12 @@ import { FilterByPriceComponent } from './core/components/filter-by-price/filter
 import { FilterByCategoryComponent } from './core/components/filter-by-category/filter-by-category.component';
 import { HomeComponent } from './pages/home/home.component';
 import { FormsModule } from '@angular/forms';
+import { BookDetailComponent } from './pages/book-detail/book-detail.component';
 
 registerLocaleData(localePt);
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, BookCardComponent, FilterByPriceComponent, FilterByCategoryComponent, HomeComponent],
+  declarations: [AppComponent, HeaderComponent, BookCardComponent, FilterByPriceComponent, FilterByCategoryComponent, HomeComponent, BookDetailComponent],
   imports: [BrowserModule, AppRoutingModule, FontAwesomeModule, FormsModule],
   providers: [
     {

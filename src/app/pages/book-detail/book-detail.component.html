@@ -1,0 +1,36 @@
+<section id="book-detail-container">
+  <div id="book-detail-content">
+    <div id="btn-back-content">
+      <fa-icon [icon]="arrowBack" id="btn-back-icon"></fa-icon>
+      <a href="#" id="btn-back">Voltar</a>
+    </div>
+    <section id="book-detail-image-content">
+      <img [src]="book.imageUrl" [alt]="book.name" id="book-detail-image" />
+    </section>
+    <section id="book-detail-name-content">
+      <h3 id="book-name">
+        {{ book.name }}
+      </h3>
+      <p id="book-price">
+        {{ book.price | currency: "BRL" }}
+      </p>
+      <div id="book-detail-btn">
+        <a id="btn-add-to-cart" class="btn">adicionar ao carrinho</a>
+        <a id="btn-buy-now" class="btn">comprar agora</a>
+      </div>
+    </section>
+    <section id="book-datail-description-content">
+      <h4 id="description-title">descrição</h4>
+      <p id="description-text">{{ book.description }}</p>
+    </section>
+    <section id="book-detail-details-content">
+      <h4 id="detail-title">detalhes</h4>
+      <p id="book-author"><span>Autor:</span> {{ book.author }}</p>
+      <p id="book-publisher"><span>Editora:</span> {{ book.publisher }}</p>
+      <p id="book-number-of-pages">
+        <span>Número de páginas:</span> {{ book.numberOfPages }}
+      </p>
+      <p id="book-category"><span>Categoria:</span> {{ book.category }}</p>
+    </section>
+  </div>
+</section>
