@@ -80,6 +80,12 @@
   color: var(--gray-75);
 }
 
+#btn-add-to-cart:active,
+#btn-buy-now:active{
+  background-color: var(--orange-100);
+  color: var(--black);
+}
+
 #book-datail-description-content,
 #book-detail-details-content{
   padding-top: 10px;
@@ -98,4 +104,42 @@
 
 #book-detail-details-content span{
   font-weight: 500;
+}
+
+@media(min-width: 768px){
+  #book-detail-container{
+    padding: 10px 30px;
+  }
+
+  #book-detail-top-content{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  #book-detail-image-content{
+    margin: 0;
+  }
+
+  #book-detail-image{
+    width: 200px;
+  }
+
+  #book-detail-btn{
+    display: flex;
+    flex-direction: column;
+  }
+
+  #btn-add-to-cart,
+  #btn-buy-now{
+    width: 300px;
+  }
+}
+
+@media(min-width: 768px){
+
+  #book-detail-image-content{
+    width: 70%;
+  }
+
 }
