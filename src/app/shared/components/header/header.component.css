@@ -4,21 +4,26 @@
   position: relative;
 }
 
-#dbs-header-logo-container,
-#dbs-header-search-container,
-#dbs-header-cart-container{
+#header-logo-container,
+#header-search-container,
+#header-cart-container{
   display: flex;
 }
 
-#dbs-header-logo-container{
+#header-logo-container{
   margin-bottom: 10px;
 }
 
-#dbs-header-logo{
+#header-logo{
   text-decoration: none;
   font-size: 1.5em;
   font-weight: 600;
   color: var(--gray-10);
+  transition: all .3s;
+}
+
+#header-logo:hover{
+  color: var(--orange-100);
 }
 
 #cart-amount{
@@ -30,7 +35,7 @@
   z-index: 5;
 }
 
-#dbs-header-search-container{
+#header-search-container{
   justify-content: space-between;
   width: 100%;
   border-radius: 25px;
@@ -38,16 +43,16 @@
   background-color: var(--white);
 }
 
-#dbs-header-search-input{
+#header-search-input{
   width: calc(100% - 25px);
   border: none;
 }
 
-#dbs-header-search-input:focus{
+#header-search-input:focus{
   outline: none;
 }
 
-#dbs-header-search-button{
+#header-search-button{
   width: 25px;
   height: 25px;
   margin-right: -8px;
@@ -60,24 +65,24 @@
   transition: all .3s;
 }
 
-#dbs-header-search-button:hover{
+#header-search-button:hover{
   background-color: var(--gray-100);
   color: var(--gray-10);
 }
 
-#dbs-header-search-button span{
+#header-search-button span{
   margin-top: -2px;
   margin-left: -1px;
 }
 
-#dbs-header-cart-container{
+#header-cart-container{
   margin-top: 8px;
   position: absolute;
   top: 10px;
   right: 10px;
 }
 
-#dbs-header-cart-container span{
+#header-cart-container span{
   color: var(--gray-10);
 }
 
@@ -89,29 +94,29 @@
     height: 65px;
   }
 
-  #dbs-header-logo-container,
-  #dbs-header-cart-container{
+  #header-logo-container,
+  #header-cart-container{
     width: 30%;
   }
 
-  #dbs-header-search-container{
+  #header-search-container{
     width: 40%;
   }
 
-  #dbs-header-logo-container{
+  #header-logo-container{
     margin: 0;
   }
 
-  #dbs-header-search-container{
+  #header-search-container{
     height: 35px;
   }
 
-  #dbs-header-logo{
+  #header-logo{
     font-size: 1.6em;
     margin-top: -3px;
   }
 
-  #dbs-header-cart-container{
+  #header-cart-container{
     position: relative;
     top: 0;
     right: 0;

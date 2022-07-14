@@ -1,15 +1,15 @@
 <header>
   <nav id="nav-container">
-    <div id="dbs-header-logo-container">
-      <a href="#" id="dbs-header-logo">{{ headerLogo }}</a>
+    <div id="header-logo-container">
+      <a [routerLink]="['']" id="header-logo">{{ headerLogo }}</a>
     </div>
-    <div id="dbs-header-search-container">
-      <input type="text" id="dbs-header-search-input" placeholder="Pesquisar" />
-      <a id="dbs-header-search-button">
+    <div id="header-search-container">
+      <input type="text" id="header-search-input" placeholder="Pesquisar" />
+      <a id="header-search-button">
         <span> <fa-icon [icon]="faSearch"></fa-icon></span>
       </a>
     </div>
-    <div id="dbs-header-cart-container">
+    <div id="header-cart-container">
       <span> <fa-icon [icon]="faCartShopping"></fa-icon></span>
       <p id="cart-amount">0</p>
     </div>

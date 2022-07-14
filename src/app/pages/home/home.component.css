@@ -1,3 +1,7 @@
+a{
+  text-decoration: none;
+}
+
 #home-container{
   display: flex;
   justify-content: center;
