@@ -15,4 +15,8 @@ export class BookService {
   getAll(): IBook[]{
     return this.bookList;
   }
+
+  getById(id: number): IBook{
+    return bookList.find((book: IBook) => book.id === id) as IBook;
+  }
 }
