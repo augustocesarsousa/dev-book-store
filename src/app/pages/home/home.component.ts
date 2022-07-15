@@ -1,6 +1,7 @@
 import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 import { Component, OnInit } from '@angular/core';
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { BookService } from 'src/app/core/services/book-service.service';
 import { Category } from 'src/app/shared/enums/category';
 import { IBook } from 'src/app/shared/models/book.model';
 
@@ -13,9 +14,13 @@ export class HomeComponent implements OnInit {
   arrowRight = faArrowRight;
   arrowLeft = faArrowLeft;
   isChecked = false;
+  bookList: IBook[];
   book!: IBook;
 
-  constructor(private breakpointObserver: BreakpointObserver) {
+  constructor(
+    private breakpointObserver: BreakpointObserver,
+    private bootService: BookService
+    ) {
     this.breakpointObserver
       .observe(['(max-width: 991px)'])
       .subscribe((result: BreakpointState) => {
@@ -25,6 +30,7 @@ export class HomeComponent implements OnInit {
           this.isChecked = true;
         }
       });
+    this.bookList = bootService.getAll();
     this.book = {
       id: 1,
       name: 'Agile: Desenvolvimento de software com entregas frequentes e foco no valor de negócio',

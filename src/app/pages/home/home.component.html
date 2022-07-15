@@ -28,44 +28,9 @@
       </ng-template>
     </section>
     <section id="book-list-content" class="row">
-      <div class="col-6 col-sm-4 col-md-3 book-card-content">
+      <div class="col-6 col-sm-4 col-md-3 book-card-content" *ngFor="let book of bookList">
         <a [routerLink]="['/book', book.id]">
-          <app-book-card></app-book-card>
-        </a>
-      </div>
-      <div class="col-6 col-sm-4 col-md-3 book-card-content">
-        <a [routerLink]="['/book', book.id]">
-          <app-book-card></app-book-card>
-        </a>
-      </div>
-      <div class="col-6 col-sm-4 col-md-3 book-card-content">
-        <a [routerLink]="['/book', book.id]">
-          <app-book-card></app-book-card>
-        </a>
-      </div>
-      <div class="col-6 col-sm-4 col-md-3 book-card-content">
-        <a [routerLink]="['/book', book.id]">
-          <app-book-card></app-book-card>
-        </a>
-      </div>
-      <div class="col-6 col-sm-4 col-md-3 book-card-content">
-        <a [routerLink]="['/book', book.id]">
-          <app-book-card></app-book-card>
-        </a>
-      </div>
-      <div class="col-6 col-sm-4 col-md-3 book-card-content">
-        <a [routerLink]="['/book', book.id]">
-          <app-book-card></app-book-card>
-        </a>
-      </div>
-      <div class="col-6 col-sm-4 col-md-3 book-card-content">
-        <a [routerLink]="['/book', book.id]">
-          <app-book-card></app-book-card>
-        </a>
-      </div>
-      <div class="col-6 col-sm-4 col-md-3 book-card-content">
-        <a [routerLink]="['/book', book.id]">
-          <app-book-card></app-book-card>
+          <app-book-card [book]="book"></app-book-card>
         </a>
       </div>
     </section>

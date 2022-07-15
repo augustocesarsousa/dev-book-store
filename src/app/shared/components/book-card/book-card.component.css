@@ -1,8 +1,8 @@
 #card-book-container{
   padding: 5px;
   width: 150px;
-  border: 1px solid var(--gray-10);
-  margin-bottom: 10px;
+  height: 100%;
+  border: 1px solid var(--gray-50);
 }
 
 #card-book-container:hover{
