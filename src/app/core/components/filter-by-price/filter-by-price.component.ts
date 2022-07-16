@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BookService } from '../../services/book-service.service';
 
 @Component({
   selector: 'app-filter-by-price',
@@ -6,12 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./filter-by-price.component.css']
 })
 export class FilterByPriceComponent implements OnInit {
-  minValue = 0;
-  maxValue = 0;
 
-  constructor() { }
+  constructor(private bookService: BookService) {}
 
   ngOnInit(): void {
+  }
+
+  filter(price: number): void{
+    this.bookService.filter.price = price;
+    this.bookService.filterBook();
+    // this.bookService.filterByPrice(price);
   }
 
 }

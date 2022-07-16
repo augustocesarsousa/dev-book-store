@@ -19,19 +19,11 @@ export class FilterByCategoryComponent implements OnInit {
   filter(category: string, event: any){
     this.category = (<any>Category)[category];
     if(event.target.checked){
-      this.addFilter(this.category);
+      this.bootService.filter.categories.push(this.category);
     }else{
-      this.removeFilter(this.category);
+      this.bootService.filter.categories = this.bootService.filter.categories.filter(item => item !== this.category);
     }
-    this.bootService.filterByCategory(this.categoryList);
-  }
-
-  addFilter(category: Category): void{
-    this.categoryList.push(category);
-  }
-
-  removeFilter(category: Category): void{
-    this.categoryList = this.categoryList.filter(item => item !== category);
+    this.bootService.filterBook();
   }
 
 }

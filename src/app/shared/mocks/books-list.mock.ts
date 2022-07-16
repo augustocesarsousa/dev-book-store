@@ -82,7 +82,7 @@ export const bookList: IBook[] = [
     {
         id: 8,
         name: 'Java: Como Programar',
-        price: 179.90,
+        price: 219.90,
         category: Category.programmation,
         imageUrl: '/assets/images/java.jpg',
         author: 'Paul Deitel',

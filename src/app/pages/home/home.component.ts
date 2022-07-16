@@ -29,13 +29,13 @@ export class HomeComponent implements OnInit {
           this.isChecked = true;
         }
       });
-    this.bootService.getList().subscribe(bookList =>(
+    this.bootService.observerBookList().subscribe(bookList =>(
       this.bookList = bookList
     ));
   }
 
   ngOnInit(): void {
-    this.bootService.setList(bookList);
+    this.bootService.getAllBooks();
   }
 
   checkValue(e: any) {

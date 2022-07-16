@@ -4,15 +4,23 @@
   margin-bottom: 5px;
 }
 
-.checkbox-group{
+.radio-group{
   padding: 5px;
 }
 
-.checkbox-group input:hover,
-.checkbox-group label:hover{
+.radio-group input:hover,
+.radio-group label:hover{
   cursor: pointer;
 }
 
-.checkbox-group input{
+.radio-group input{
   margin-right: 5px;
+}
+
+.filter-by-price-item{
+  display: none;
+}
+
+.filter-by-price-item:checked ~ label{
+  color: var(--orange-100);
 }

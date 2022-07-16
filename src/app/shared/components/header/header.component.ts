@@ -17,6 +17,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {}
 
   filter(name: string){
-    this.bootService.filterByName(name);
+    this.bootService.filter.name = name;
+    this.bootService.filterBook();
   }
 }
