@@ -1,31 +1,7 @@
 <section id="filter-by-category-container">
   <p id="filter-by-category-title">Categoria</p>
-  <div class="checkbox-group">
-    <input type="checkbox" name="chk-architecture" id="chk-architecture">
-    <label for="chk-architecture">Arquitetura</label>
-  </div>
-  <div class="checkbox-group">
-    <input type="checkbox" name="chk-cloud" id="chk-cloud">
-    <label for="chk-cloud">Nuvem</label>
-  </div>
-  <div class="checkbox-group">
-    <input type="checkbox" name="chk-dataBase" id="chk-dataBase">
-    <label for="chk-dataBase">Banco de dados</label>
-  </div>
-  <div class="checkbox-group">
-    <input type="checkbox" name="chk-design" id="chk-design">
-    <label for="chk-design">Design</label>
-  </div>
-  <div class="checkbox-group">
-    <input type="checkbox" name="chk-framework" id="chk-framework">
-    <label for="chk-framework">Framework</label>
-  </div>
-  <div class="checkbox-group">
-    <input type="checkbox" name="chk-methodology" id="chk-methodology">
-    <label for="chk-methodology">Metodologia</label>
-  </div>
-  <div class="checkbox-group">
-    <input type="checkbox" name="chk-programmation" id="chk-programmation">
-    <label for="chk-programmation">Programação</label>
+  <div class="checkbox-group" *ngFor="let category of categories | keyvalue">
+    <input type="checkbox" [id]="category.key" [value]="category.key" #[category.key] (change)="filter(category.key, $event)">
+    <label [for]="category.key">{{category.value}}</label>
   </div>
 </section>
