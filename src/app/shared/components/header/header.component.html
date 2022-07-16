@@ -4,8 +4,8 @@
       <a [routerLink]="['']" id="header-logo">{{ headerLogo }}</a>
     </div>
     <div id="header-search-container">
-      <input type="text" id="header-search-input" placeholder="Pesquisar" />
-      <a id="header-search-button">
+      <input type="text" id="header-search-input" placeholder="Pesquisar" #searchInput (keyup.enter)="filter(searchInput.value)"/>
+      <a id="header-search-button" (click)="filter(searchInput.value)">
         <span> <fa-icon [icon]="faSearch"></fa-icon></span>
       </a>
     </div>

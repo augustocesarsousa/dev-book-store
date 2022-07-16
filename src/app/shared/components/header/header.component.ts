@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { faCartShopping, faSearch } from '@fortawesome/free-solid-svg-icons';
+import { BookService } from 'src/app/core/services/book-service.service';
 
 @Component({
   selector: 'app-header',
@@ -11,7 +12,11 @@ export class HeaderComponent implements OnInit {
   faSearch = faSearch;
   faCartShopping = faCartShopping;
 
-  constructor() {}
+  constructor(private bootService: BookService) {}
 
   ngOnInit(): void {}
+
+  filter(name: string){
+    this.bootService.filterByName(name);
+  }
 }
