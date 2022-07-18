@@ -2,7 +2,9 @@ import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 import { Component, OnInit } from '@angular/core';
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { BookService } from 'src/app/core/services/book-service.service';
+import { bannerImagesList } from 'src/app/shared/mocks/banner-images-list.mock';
 import { IBook } from 'src/app/shared/models/book.model';
+import { ICarouselImage } from 'src/app/shared/models/carousel.model';
 
 @Component({
   selector: 'app-home',
@@ -14,11 +16,12 @@ export class HomeComponent implements OnInit {
   arrowLeft = faArrowLeft;
   isChecked = false;
   bookList!: IBook[];
+  images: ICarouselImage[] = bannerImagesList;
 
   constructor(
     private breakpointObserver: BreakpointObserver,
     private bootService: BookService
-    ) {
+  ) {
     this.breakpointObserver
       .observe(['(max-width: 991px)'])
       .subscribe((result: BreakpointState) => {
@@ -28,9 +31,9 @@ export class HomeComponent implements OnInit {
           this.isChecked = true;
         }
       });
-    this.bootService.observerBookList().subscribe(bookList =>(
-      this.bookList = bookList
-    ));
+    this.bootService
+      .observerBookList()
+      .subscribe((bookList) => (this.bookList = bookList));
   }
 
   ngOnInit(): void {

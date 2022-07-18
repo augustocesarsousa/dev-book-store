@@ -1,5 +1,11 @@
 <section id="home-container">
   <div id="home-content">
+    <app-banner
+      [images]="images"
+      [autoSlider]="true"
+      [sliderInterval]="5000"
+      [controls]="true"
+    ></app-banner>
     <section
       id="sidebar-content"
       [ngStyle]="{ left: isChecked ? '0' : '-280px' }"
@@ -31,7 +37,10 @@
       <div id="sort-book-content">
         <app-sort-book></app-sort-book>
       </div>
-      <div class="col-6 col-sm-4 col-md-3 book-card-content" *ngFor="let book of bookList">
+      <div
+        class="col-6 col-sm-4 col-md-3 book-card-content"
+        *ngFor="let book of bookList"
+      >
         <a [routerLink]="['/book', book.id]">
           <app-book-card [book]="book"></app-book-card>
         </a>

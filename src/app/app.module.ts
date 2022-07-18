@@ -15,11 +15,12 @@ import { FormsModule } from '@angular/forms';
 import { BookDetailComponent } from './pages/book-detail/book-detail.component';
 import { SortBookComponent } from './shared/components/sort-book/sort-book.component';
 import { SortPipe } from './core/pipes/sort.pipe';
+import { BannerComponent } from './shared/components/banner/banner.component';
 
 registerLocaleData(localePt);
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, BookCardComponent, FilterByPriceComponent, FilterByCategoryComponent, HomeComponent, BookDetailComponent, SortBookComponent, SortPipe],
+  declarations: [AppComponent, HeaderComponent, BookCardComponent, FilterByPriceComponent, FilterByCategoryComponent, HomeComponent, BookDetailComponent, SortBookComponent, SortPipe, BannerComponent],
   imports: [BrowserModule, AppRoutingModule, FontAwesomeModule, FormsModule],
   providers: [
     {
