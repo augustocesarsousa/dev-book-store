@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Category } from 'src/app/shared/enums/category';
-import { BookService } from '../../services/book-service.service';
+import { BookService } from '../../../core/services/book-service.service';
 
 @Component({
   selector: 'app-filter-by-category',
@@ -9,8 +9,7 @@ import { BookService } from '../../services/book-service.service';
 })
 export class FilterByCategoryComponent implements OnInit {
   category!: Category;
-  categoryList: Category[] = [];
-  categories = Category;
+  categoryList = Category;
 
   constructor(private bootService: BookService) { }
 

@@ -17,7 +17,7 @@ a{
   position: absolute;
   left: -280px;
   width: 280px;
-  height: 100%;
+  min-height: 100%;
   padding: 30px;
   background-color: var(--gray-100);
   color: var(--gray-10);

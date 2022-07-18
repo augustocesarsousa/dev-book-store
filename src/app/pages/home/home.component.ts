@@ -2,7 +2,6 @@ import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 import { Component, OnInit } from '@angular/core';
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { BookService } from 'src/app/core/services/book-service.service';
-import { bookList } from 'src/app/shared/mocks/books-list.mock';
 import { IBook } from 'src/app/shared/models/book.model';
 
 @Component({

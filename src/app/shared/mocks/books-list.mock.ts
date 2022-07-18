@@ -1,7 +1,7 @@
 import { Category } from "../enums/category";
 import { IBook } from "../models/book.model";
 
-export const bookList: IBook[] = [
+export const bookListMock: IBook[] = [
     {
         id: 1,
         name: 'Agile: Desenvolvimento de software com entregas frequentes e foco no valor de negócio',

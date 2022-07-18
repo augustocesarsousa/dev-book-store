@@ -1,0 +1,11 @@
+<div id="book-select-content">
+    <label for="book-select" id="lb-book-select">Ordernar por:</label>
+    <select name="book" id="book-select" [(ngModel)]="selectedSort" (change)="sortBook()">
+        <option 
+        *ngFor="let sort of sortList | keyvalue" 
+        [value]="sort.key"
+        >
+            {{sort.value}}
+        </option>
+    </select>
+</div>

@@ -1,0 +1,16 @@
+#book-select-content{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+#lb-book-select{
+    margin-right: 5px;
+}
+
+#book-select{
+    padding: 5px;
+    border-radius: 10px;
+}
