@@ -16,11 +16,12 @@ import { BookDetailComponent } from './pages/book-detail/book-detail.component';
 import { SortBookComponent } from './shared/components/sort-book/sort-book.component';
 import { SortPipe } from './core/pipes/sort.pipe';
 import { BannerComponent } from './shared/components/banner/banner.component';
+import { FooterComponent } from './shared/components/footer/footer.component';
 
 registerLocaleData(localePt);
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, BookCardComponent, FilterByPriceComponent, FilterByCategoryComponent, HomeComponent, BookDetailComponent, SortBookComponent, SortPipe, BannerComponent],
+  declarations: [AppComponent, HeaderComponent, BookCardComponent, FilterByPriceComponent, FilterByCategoryComponent, HomeComponent, BookDetailComponent, SortBookComponent, SortPipe, BannerComponent, FooterComponent],
   imports: [BrowserModule, AppRoutingModule, FontAwesomeModule, FormsModule],
   providers: [
     {

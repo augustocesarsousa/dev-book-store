@@ -17,11 +17,11 @@ a{
   position: absolute;
   left: -280px;
   width: 280px;
-  min-height: 100%;
   padding: 30px;
   background-color: var(--gray-100);
   color: var(--gray-10);
   transition: all .5s ease;
+  border-radius: 0 15px 15px 0;
 }
 
 #find-by-category-content{
@@ -49,6 +49,9 @@ a{
 
 #book-list-content{
   padding: 10px;
+  width: 100%;
+  min-height: 600px;
+  margin: 0;
 }
 
 .book-card-content{
@@ -59,21 +62,22 @@ a{
 }
 
 @media(min-width: 992px){
+  #book-list-container{
+    display: flex;
+  }
 
   #sidebar-content{
-    width: 240px;
+    position: relative;
+    min-width: 240px;
     left: 0;
     background-color: var(--white);
     color: var(--gray-100);
     border-right: 1px solid var(--gray-50);
+    border-radius: 0;
   }
 
   #btn-sidebar-content{
     display: none;
-  }
-
-  #book-list-content{
-    margin-left: 240px;
   }
 }
 

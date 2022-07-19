@@ -4,47 +4,52 @@
       [images]="images"
       [autoSlider]="true"
       [sliderInterval]="5000"
-      [controls]="true"
+      [controls]="false"
     ></app-banner>
-    <section
-      id="sidebar-content"
-      [ngStyle]="{ left: isChecked ? '0' : '-280px' }"
-    >
-      <div id="find-by-category-content">
-        <app-filter-by-category></app-filter-by-category>
-      </div>
-      <div id="find-by-price-content">
-        <app-filter-by-price></app-filter-by-price>
-      </div>
-      <span id="btn-sidebar-content">
-        <input
-          type="checkbox"
-          name="chk-sidebar"
-          id="chk-sidebar"
-          (change)="checkValue($event)"
-        />
-        <label for="chk-sidebar" *ngIf="!isChecked; else arrowLeftTemplate">
-          <fa-icon [icon]="arrowRight"></fa-icon>
-        </label>
-      </span>
-      <ng-template #arrowLeftTemplate>
-        <label for="chk-sidebar">
-          <fa-icon [icon]="arrowLeft"></fa-icon>
-        </label>
-      </ng-template>
-    </section>
-    <section id="book-list-content" class="row">
-      <div id="sort-book-content">
-        <app-sort-book></app-sort-book>
-      </div>
-      <div
-        class="col-6 col-sm-4 col-md-3 book-card-content"
-        *ngFor="let book of bookList"
+    <div id="book-list-container">
+      <section
+        id="sidebar-content"
+        [ngStyle]="{ left: isChecked ? '0' : '-280px' }"
       >
-        <a [routerLink]="['/book', book.id]">
-          <app-book-card [book]="book"></app-book-card>
-        </a>
-      </div>
-    </section>
+        <div id="find-by-category-content">
+          <app-filter-by-category></app-filter-by-category>
+        </div>
+        <div id="find-by-price-content">
+          <app-filter-by-price></app-filter-by-price>
+        </div>
+        <span id="btn-sidebar-content">
+          <input
+            type="checkbox"
+            name="chk-sidebar"
+            id="chk-sidebar"
+            (change)="checkValue($event)"
+          />
+          <label for="chk-sidebar" *ngIf="!isChecked; else arrowLeftTemplate">
+            <fa-icon [icon]="arrowRight"></fa-icon>
+          </label>
+        </span>
+        <ng-template #arrowLeftTemplate>
+          <label for="chk-sidebar">
+            <fa-icon [icon]="arrowLeft"></fa-icon>
+          </label>
+        </ng-template>
+      </section>
+      <section id="book-list-content">
+        <div id="sort-book-content">
+          <app-sort-book></app-sort-book>
+        </div>
+        <div class="row">
+          <div
+            class="col-6 col-sm-4 col-md-3 book-card-content"
+            *ngFor="let book of bookList"
+          >
+            <a [routerLink]="['/book', book.id]">
+              <app-book-card [book]="book"></app-book-card>
+            </a>
+          </div>
+
+        </div>
+      </section>
+    </div>
   </div>
 </section>
