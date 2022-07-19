@@ -1,6 +1,6 @@
 # DevBookStore
 
-Este projeto foi desenvolvido no Bootcamp Santander Fullstack Developer pela <a href="https://www.dio.me/dev-week/santander/bootcamps" target="_blank">DIO</a> no módulo Angular, ele consiste em simular o frontend de um e-commerce utilizando as melhores práticas de desenvolvimento e tecnologias mais utilizadas no mercado atual, abaixo segue uma descrição resumida das tecnologias:
+Este projeto foi desenvolvido no Bootcamp Santander Fullstack Developer pela <a href="https://www.dio.me/" target="_blank">DIO</a> no módulo Angular, ele consiste em simular o frontend de um e-commerce utilizando as melhores práticas de desenvolvimento e tecnologias mais utilizadas no mercado atual, abaixo segue uma descrição resumida das tecnologias:
 
 - Linguagem de programação: Typescript
 - Framework: Angular
@@ -39,4 +39,4 @@ Este projeto foi desenvolvido no Bootcamp Santander Fullstack Developer pela <a 
 
 ## Link do projeto implantado (Netlify)
 
-<a href="https://acsousa-bankline.netlify.app/" target="_blank">DevBookStore</a>
+<a href="https://acsousa-devbookstore.netlify.app/" target="_blank">DevBookStore</a>

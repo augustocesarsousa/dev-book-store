@@ -6,6 +6,8 @@ import { HomeComponent } from './pages/home/home.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'book/:id', component: BookDetailComponent },
+  { path: '**', redirectTo: '' },
+  { path: 'book/:id/**', redirectTo: '' },
 ];
 
 @NgModule({

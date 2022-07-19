@@ -1,5 +1,5 @@
 <section id="book-detail-container">
-  <div id="book-detail-content">
+  <div id="book-detail-content" *ngIf="book; else bookNotFoud">
     <div id="btn-back-content">
       <fa-icon [icon]="arrowBack" id="btn-back-icon"></fa-icon>
       <a [routerLink]="['']" id="btn-back">Voltar</a>
@@ -37,4 +37,7 @@
       </section>
     </div>
   </div>
+  <ng-template #bookNotFoud>
+    <div id="book-not-fould"><p>Livro não encontrado!</p></div></ng-template
+  >
 </section>

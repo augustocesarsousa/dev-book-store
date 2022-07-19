@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit {
 
   constructor(
     private breakpointObserver: BreakpointObserver,
-    private bootService: BookService
+    private bookService: BookService
   ) {
     this.breakpointObserver
       .observe(['(max-width: 991px)'])
@@ -31,13 +31,13 @@ export class HomeComponent implements OnInit {
           this.isChecked = true;
         }
       });
-    this.bootService
+    this.bookService
       .observerBookList()
       .subscribe((bookList) => (this.bookList = bookList));
   }
 
   ngOnInit(): void {
-    this.bootService.filterBook();
+    this.bookService.filterBook();
   }
 
   checkValue(e: any) {

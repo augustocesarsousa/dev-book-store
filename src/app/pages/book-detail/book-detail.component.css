@@ -115,6 +115,14 @@
   font-weight: 500;
 }
 
+#book-not-fould{
+  height: calc(100vh - 135px);
+}
+
+#book-not-fould p{
+  font-size: 28px;
+}
+
 @media(min-width: 768px){
   #book-detail-container{
     padding: 10px 30px;
