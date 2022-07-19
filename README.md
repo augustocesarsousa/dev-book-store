@@ -1,27 +1,42 @@
 # DevBookStore
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.4.
+Este projeto foi desenvolvido no Bootcamp Santander Fullstack Developer pela <a href="https://www.dio.me/dev-week/santander/bootcamps" target="_blank">DIO</a> no módulo Angular, ele consiste em simular o frontend de um e-commerce utilizando as melhores práticas de desenvolvimento e tecnologias mais utilizadas no mercado atual, abaixo segue uma descrição resumida das tecnologias:
 
-## Development server
+- Linguagem de programação: Typescript
+- Framework: Angular
+- IDE: Visual Studio Code
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Layout
 
-## Code scaffolding
+- HTML
+- CSS
+  - Bootstrap
+  - Flexbox
+  - Layout responsivo
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Projeto
 
-## Build
+- Components
+- Data Binding
+- Directives
+- Enums
+- Injeção de dependência
+- Pipes
+- Mocks
+- Models
+- Routes
+- Services
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Imagens o projeto
 
-## Running unit tests
+1. Página - Home
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+![Home page](/src/assets/images/home-page.png)
 
-## Running end-to-end tests
+2. Página - Detalhes
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+![Details page](/src/assets/images/details-page.png)
 
-## Further help
+## Link do projeto implantado (Netlify)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+<a href="https://acsousa-bankline.netlify.app/" target="_blank">DevBookStore</a>

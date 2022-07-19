@@ -5,24 +5,26 @@ import { BookService } from '../../../core/services/book-service.service';
 @Component({
   selector: 'app-filter-by-category',
   templateUrl: './filter-by-category.component.html',
-  styleUrls: ['./filter-by-category.component.css']
+  styleUrls: ['./filter-by-category.component.css'],
 })
 export class FilterByCategoryComponent implements OnInit {
   category!: Category;
   categoryList = Category;
 
-  constructor(private bootService: BookService) { }
+  constructor(private bootService: BookService) {}
 
   ngOnInit(): void {}
 
-  filter(category: string, event: any){
+  filter(category: string, event: any) {
     this.category = (<any>Category)[category];
-    if(event.target.checked){
+    if (event.target.checked) {
       this.bootService.filter.categories.push(this.category);
-    }else{
-      this.bootService.filter.categories = this.bootService.filter.categories.filter(item => item !== this.category);
+    } else {
+      this.bootService.filter.categories =
+        this.bootService.filter.categories.filter(
+          (item) => item !== this.category
+        );
     }
     this.bootService.filterBook();
   }
-
 }

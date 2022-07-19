@@ -21,18 +21,20 @@
         </div>
       </section>
     </div>
-    <section id="book-datail-description-content">
-      <h4 id="description-title">descrição</h4>
-      <p id="description-text">{{ book.description }}</p>
-    </section>
-    <section id="book-detail-details-content">
-      <h4 id="detail-title">detalhes</h4>
-      <p id="book-author"><span>Autor:</span> {{ book.author }}</p>
-      <p id="book-publisher"><span>Editora:</span> {{ book.publisher }}</p>
-      <p id="book-number-of-pages">
-        <span>Número de páginas:</span> {{ book.numberOfPages }}
-      </p>
-      <p id="book-category"><span>Categoria:</span> {{ book.category }}</p>
-    </section>
+    <div id="book-detail-bottom-content">
+      <section id="book-detail-details-content">
+        <h4 id="detail-title">detalhes</h4>
+        <p id="book-author"><span>Autor:</span> {{ book.author }}</p>
+        <p id="book-publisher"><span>Editora:</span> {{ book.publisher }}</p>
+        <p id="book-number-of-pages">
+          <span>Número de páginas:</span> {{ book.numberOfPages }}
+        </p>
+        <p id="book-category"><span>Categoria:</span> {{ book.category }}</p>
+      </section>
+      <section id="book-datail-description-content">
+        <h4 id="description-title">descrição</h4>
+        <p id="description-text">{{ book.description }}</p>
+      </section>
+    </div>
   </div>
 </section>

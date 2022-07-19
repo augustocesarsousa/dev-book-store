@@ -37,7 +37,7 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.bootService.getAllBooks();
+    this.bootService.filterBook();
   }
 
   checkValue(e: any) {

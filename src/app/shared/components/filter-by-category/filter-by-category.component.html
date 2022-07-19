@@ -1,7 +1,17 @@
 <section id="filter-by-category-container">
   <p id="filter-by-category-title">Categoria</p>
-  <div class="checkbox-group" *ngFor="let category of categoryList | keyvalue">
-    <input type="checkbox" [id]="category.key" [value]="category.key" #[category.key] (change)="filter(category.key, $event)">
-    <label [for]="category.key">{{category.value}}</label>
+  <div
+    class="checkbox-group"
+    *ngFor="let category of categoryList | keyvalue | sort: 'value'"
+  >
+    <input
+      type="checkbox"
+      class="filter-by-category-item"
+      [id]="category.key"
+      [value]="category.key"
+      #[category.key]
+      (change)="filter(category.key, $event)"
+    />
+    <label [for]="category.key">{{ category.value }}</label>
   </div>
 </section>

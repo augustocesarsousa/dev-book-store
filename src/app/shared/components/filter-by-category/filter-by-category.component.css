@@ -11,8 +11,13 @@
 .checkbox-group input:hover,
 .checkbox-group label:hover{
   cursor: pointer;
+  color: var(--orange-100);
 }
 
 .checkbox-group input{
   margin-right: 5px;
+}
+
+.filter-by-category-item:checked ~ label{
+  color: var(--orange-100);
 }

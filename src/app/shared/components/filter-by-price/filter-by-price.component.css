@@ -11,6 +11,7 @@
 .radio-group input:hover,
 .radio-group label:hover{
   cursor: pointer;
+  color: var(--orange-100);
 }
 
 .radio-group input{

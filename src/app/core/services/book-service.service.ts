@@ -26,16 +26,11 @@ export class BookService {
     return this.bookList.asObservable();
   }
 
-  getAllBooks(): void {
-    this.bookList.next(bookListMock);
-  }
-
   getBookById(id: number): IBook {
     return bookListMock.find((book: IBook) => book.id === id) as IBook;
   }
 
   filterBook(): void {
-    console.log(this.filter);
     this.bookListFiltered = bookListMock;
     if (this.filter.name != '') {
       this.bookListFiltered = this.filterBookListByName(this.bookListFiltered);
